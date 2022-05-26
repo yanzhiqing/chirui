@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping>
+<!--
+    Created by the Middlegen Hibernate plugin 2.1
+
+    http://boss.bekk.no/boss/middlegen/
+    http://www.hibernate.org/
+-->
+
+<class
+    name="crjd.model.admin.system.systemlog.SystemLog"
+    table="SYSLOG"
+>
+
+   <id
+        name="rowId"
+        type="java.lang.Integer"
+        column="ROW_ID"
+    >
+        <generator class="increment" />
+    </id>
+
+
+
+    <!--property
+        name="systemLogId"
+        type="java.lang.String"
+        column="ID"
+        length="30"
+        insert="false"
+        update="false"
+    /-->
+    <property
+        name="operationTime"
+        type="java.sql.Timestamp"
+        column="OPETIM"
+        length="30"
+        insert="false"
+        update="false"
+    />
+    <property
+        name="operationUser"
+        type="java.lang.String"
+        column="OPEPER"
+        length="30"
+    />
+    <property
+        name="operationContent"
+        type="java.lang.String"
+        column="OPECON"
+        length="200"
+    />
+    <property
+        name="operationType"
+        type="java.lang.String"
+        column="OPESTY"
+        length="30"
+    />
+    <property
+        name="operatorRole"
+        type="java.lang.String"
+        column="OPESIGN"
+        length="30"
+    />
+
+    <!-- Associations -->
+
+
+</class>
+</hibernate-mapping>

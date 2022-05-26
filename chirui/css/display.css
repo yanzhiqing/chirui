@@ -1,0 +1,282 @@
+@charset "gb2312";
+.tabT{
+	padding:0;
+	float:left;
+	font-weight: bold;
+	height: 25px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 50px;
+}
+.tab,.tab li{
+	padding:0;
+	border:none;
+	margin: 0;
+}
+.tab{
+	height:21px;
+	width:240px;
+}
+.tab li{
+	line-height:18px;
+	text-align:center;
+	cursor:pointer;
+	list-style-type: none;
+	padding-right: 30px;
+	padding-left: 30px;
+	margin-right: 5px;
+	background-color: #FFFFFF;
+	padding-top: 1px;
+	float: left;
+	margin-top: 5px;
+	height: 19px;
+}
+.tab li.current{
+	display:block;
+	color:#df0094;
+	background-color:#fff;
+	background-image:url(../webimages/butbj.jpg);
+	padding-right: 30px;
+	padding-left: 30px;
+}
+.show,hidden{
+	text-align:left;
+	margin-left: 10px;
+	width: 660px;
+	height: 761px;
+}
+.hidden{display:none;}
+.show{
+	clear: left;
+}
+
+#display_center {
+	clear: left;
+	width: 950px;
+	height: 795px;
+	margin-top: 5px;
+}
+.mk_botbk {
+	border-bottom-width: 1px;
+	border-bottom-style: dashed;
+	border-bottom-color: #d7d7d7;
+}
+.cxss {
+	height: 21px;
+	border-right-width: 2px;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-left-style: solid;
+	border-right-color: #FFFFFF;
+	border-left-color: #FFFFFF;
+	font-weight: bold;
+	color: #7c7b7b;
+	text-align: left;
+	padding-left: 10px;
+	padding-top: 5px;
+	font-size: 14px;
+	margin-top: 10px;
+}
+.cxsstb {
+	font-size: 12px;
+	width: 235px;
+	height: 315px;
+	text-align: left;
+	margin-left: 10px;
+	margin-bottom: 20px;
+}
+.textright a {
+	font-weight: bold;
+}
+
+#tag_but {
+	background-image: url(../webimages/search/search_but.gif);
+	background-repeat: no-repeat;
+	background-position: left top;
+	font-weight: bold;
+	color: #FFFFFF;
+	height: 28px;
+	width: 159px;
+	border:0px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+#tag_left {
+	width: 683px;
+	height: 794px;
+	float: left;
+}
+#tag_middl {
+	height: 794px;
+	width: 683px;
+	clear: left;
+}
+
+.tag {
+	width: 325px;
+	padding-bottom: 10px;
+	float: left;
+	text-align: center;
+	margin-bottom: 10px;
+	border: 1px solid #cac9c9;
+}
+
+
+.tagtb {
+	height: 120px;
+	width: 307px;
+	font-size: 12px;
+	text-align: left;
+}
+.tag_text {
+	height: 16px;
+	width: 200px;
+	color: #7c7c7c;
+	border: 1px solid #7c7c7c;
+}
+
+
+.tagtt  {
+	height: 25px;
+	background-color: #e86ec1;
+	width: 683px;
+}
+.plfs {
+	height: 30px;
+}
+.plfs_tb {
+	height: 100%;
+	width: 100%;
+}
+
+
+.taglist  {
+	height: 680px;
+	clear: left;
+	width: 660px;
+}
+.tagpic {
+	float: left;
+	overflow: hidden;
+	height: 200px;
+	width: 130px;
+	padding-left: 20px;
+}
+
+.taglist ul {
+	margin: 0px;
+	padding: 0px;
+}
+.taglist li {
+	float: left;
+	list-style-type: none;
+	display: block;
+	height: 190px;
+	width: 130px;
+	text-align: left;
+	padding-left: 20px;
+	margin-left: 10px;
+	border: 1px solid #FFCCCC;
+	margin-top: 10px;
+	padding-top: 10px;
+	line-height: 18px;
+}
+
+.taglist a {
+	width: auto;
+	margin-right: 5px;
+
+}
+.fenye {
+	clear: left;
+	height: 21px;
+	width: 660px;
+	text-align: center;
+}
+.fenye a {
+	font-weight: bold;
+	color: #df0094;
+	margin-right: 5px;
+	margin-left: 5px;
+}
+
+.jb_pic {
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+}
+.jb_zobz {
+	width: 335px;
+	margin-left: 10px;
+	margin-top: 5px;
+}
+.biaozhun {
+	font-size: 12px;
+	height: 105px;
+	width: 260px;
+	text-align: left;
+}
+.jbbut {
+	padding-left: 10px;
+
+}
+.jbbut img {
+	float: left;
+	margin-right: 5px;
+}
+#tag_right {
+	float: right;
+	height: 794px;
+	width: 250px;
+}
+.zllist {
+	height: 700px;
+	clear: left;
+	width: 660px;
+}
+.zllist_tb {
+	height: 145px;
+	width: 638px;
+}
+
+
+.zllist ul {
+	margin: 0px;
+	padding: 0px;
+}
+.zllist li {
+	list-style-type: none;
+	display: block;
+	height: 155px;
+	text-align: left;
+	padding-left: 10px;
+	margin-left: 10px;
+	border: 1px solid #FFCCCC;
+	margin-top: 3px;
+	padding-top: 10px;
+	line-height: 18px;
+	width: 638px;
+}
+.zllist a {
+	width: auto;
+	margin-right: 5px;
+}
+.zllink {
+	height: 25px;
+	width: 518px;
+	text-align: center;
+}
+.zllink a {
+	height: 21px;
+	width: 109px;
+	display: block;
+	float: left;
+	color: #FFFFFF;
+	background-color: #2d9dcd;
+	font-weight: bold;
+	font-size: 12px;
+	padding-top: 4px;
+	margin-left: 10px;
+}

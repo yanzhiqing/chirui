@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<form-beans>	
+		<form-bean name="countryInfoForm"
+			type="crjd.model.admin.information.country.CountryInfoForm" />
+		<form-bean name="somMenuForm"
+			type="crjd.model.admin.sommanage.sommenu.SomMenuForm" />
+		<form-bean name="somInfomationForm"
+			type="crjd.model.admin.sommanage.infomation.SomInfomationForm" />
+	    <form-bean name="somTeacherForm"
+			type="crjd.model.admin.sommanage.teachers.SomTeacherForm" />
+		<form-bean name="shoolfellowForm"
+			type="crjd.model.admin.sommanage.schoolfellow.SchoolfellowForm" />
+		<form-bean name="leaderForm"
+			type="crjd.model.admin.sommanage.leader.LeaderForm" />
+			
+		<form-bean name="onLineBmForm"
+			type="crjd.model.admin.sommanage.onLineBm.OnLineBmForm"/>
+			
+		<form-bean name="deanboxFrom" type="crjd.model.admin.sommanage.deanbox.DeanBoxForm"/>
+	</form-beans>
+	<action-mappings>
+		<!-- 国家信息 韩华涛 2008.12.12 start -->
+		<action 
+			name="countryInfoForm" path="/countryInfoAction" scope="request"
+			type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="success"
+				path="/admin/information/country/show.jsp" />
+			<forward name="addsuccess"
+				path="/countryInfoAction.do?actionType=0" />
+			<forward name="detail"
+				path="/admin/information/country/look.jsp" />
+			<forward name="preUPdate"
+				path="/admin/information/country/modify.jsp" />
+			<forward name="updatesuccess"
+				path="/countryInfoAction.do?actionType=0" />
+			<forward name="delsuccess"
+				path="/countryInfoAction.do?actionType=0" />
+			<forward name="searchSuccess"
+				path="/admin/information/country/show.jsp" />
+		</action>
+		<!-- 国家信息 韩华涛 2008.12.12 end -->
+		
+		<!-- 栏目管理及授权　蒋华涛　2009.06.09 start -->
+		<action name="somMenuForm" path="/somMenuAction" scope="request"
+			type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="success"       path="/admin/sommanage/sommenu/itemList.jsp" />
+			<forward name="addsuccess"    path="/somMenuAction.do?actionType=0" />
+			<forward name="detail"        path="/admin/sommanage/sommenu/itemDetail.jsp" />
+			<forward name="preUPdate"     path="/admin/sommanage/sommenu/itemModify.jsp" />
+			<forward name="updatesuccess" path="/somMenuAction.do?actionType=0" />
+			<forward name="delsuccess"    path="/somMenuAction.do?actionType=0" />
+			<forward name="searchSuccess" path="/admin/sommanage/sommenu/itemList.jsp" />
+		</action>
+		<action path="/menuAuthorityAction" scope="request"
+			type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="userList"      path="/admin/sommanage/sommenu/userList.jsp" />
+			<forward name="authority"     path="/admin/sommanage/sommenu/menuAuthority.jsp" />
+			<forward name="updatesuccess" path="/menuAuthorityAction.do?actionType=0" />
+		</action>
+		<!-- 栏目管理及授权　蒋华涛　2009.06.09  end -->
+		
+		<!-- 杰出校友　蒋华涛　2009.06.09 start -->
+
+		<action path="/schoolfellowAction" scope="request" name="shoolfellowForm"
+			type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="success"       path="/admin/sommanage/schoolfellow/list.jsp" />
+			<forward name="updatesuccess" path="/schoolfellowAction.do?actionType=0" />
+			<forward name="detail"        path="/admin/sommanage/schoolfellow/detail.jsp" />
+			<forward name="preUPdate"     path="/admin/sommanage/schoolfellow/modify.jsp" />
+		</action>
+		<!-- 杰出校友　蒋华涛　2009.06.09  end -->
+		
+		<!--  学院领导　　蒋华涛　2009.06.09 start -->
+		<action path="/leaderAction" scope="request" name="leaderForm"
+			type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="success"       path="/admin/sommanage/leader/list.jsp" />
+			<forward name="updatesuccess" path="/leaderAction.do?actionType=0" />
+			<forward name="detail"        path="/admin/sommanage/leader/detail.jsp" />
+			<forward name="preUPdate"     path="/admin/sommanage/leader/modify.jsp" />
+		</action>
+		<!--  学院领导　　蒋华涛　2009.06.09  end -->
+		
+		<!-- 新闻信息管理　李小鹏　2009.06.17  start -->
+		<action name="somInfomationForm" path="/somInfomationAction" scope="request"
+			type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="success"       path="/admin/sommanage/information/show.jsp" />
+			<forward name="addsuccess"    path="/somInfomationAction.do?actionType=0" />
+			<forward name="detail"        path="/admin/sommanage/information/look.jsp" />
+			<forward name="preUPdate"     path="/admin/sommanage/information/modify.jsp" />
+			<forward name="updatesuccess" path="/somInfomationAction.do?actionType=0" />
+			<forward name="delsuccess"    path="/somInfomationAction.do?actionType=0" />
+			<forward name="searchSuccess" path="/admin/sommanage/information/show.jsp" />
+		</action>
+		<!-- 新闻信息管理　李小鹏　2009.06.17  end -->
+		
+		<!--教师风采管理　ljf　2009.06.29  start -->
+		<action name="somTeacherForm" path="/somTeacherAction" scope="request"
+			type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="success"       path="/admin/sommanage/teachers/show.jsp" />
+			<forward name="addsuccess"    path="/somTeacherAction.do?actionType=0" />
+			<forward name="detail"        path="/admin/sommanage/teachers/look.jsp" />
+			<forward name="preUPdate"     path="/admin/sommanage/teachers/teacherModify.jsp" />
+			<forward name="updatesuccess" path="/somTeacherAction.do?actionType=0" />
+			<forward name="delsuccess"    path="/somTeacherAction.do?actionType=0" />
+			<forward name="searchSuccess" path="/admin/sommanage/teachers/show.jsp" />
+		</action>
+		<!-- 教师风采管理　ljf 2009.06.29  end -->
+		
+		
+			<!--在线报名管理　ljf　2009.06.29  start -->
+		<action name="onLineBmForm" path="/onLineBmAction" scope="request"
+			type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="success"       path="/admin/sommanage/onlinebm/show.jsp" />
+			<forward name="addsuccess"    path="/onLineBmAction.do?actionType=0" />
+			<forward name="detail"        path="/admin/sommanage/onlinebm/look.jsp" />
+			<forward name="preUPdate"     path="/admin/sommanage/onlinebm/modify.jsp" />
+			<forward name="updatesuccess" path="/onLineBmAction.do?actionType=0" />
+			<forward name="delsuccess"    path="/onLineBmAction.do?actionType=0" />
+			<forward name="searchSuccess" path="/admin/sommanage/onlinebm/show.jsp" />
+		</action>
+		<!-- 在线报名管理　ljf 2009.06.29  end -->
+		
+		<!-- 领导信箱管理 wz 2009.09.16 -->
+		<action name="deanboxFrom" path="/deanBoxAction" scope="request" type="org.springframework.web.struts.DelegatingActionProxy">
+		<forward name="success" path="/admin/sommanage/deanbox/show.jsp"></forward>
+		<forward name="addsuccess" path="/deanBoxAction.do?actionType=0"></forward>
+		<forward name="updatesuccess" path="/deanBoxAction.do?actionType=0" />
+		<forward name="preUPdate" path="/admin/sommanage/deanbox/modify.jsp"></forward>
+		<forward name="detail" path="/admin/sommanage/deanbox/look.jsp" />
+		<forward name="delsuccess"    path="/deanBoxAction.do?actionType=0" />
+		<forward name="searchSuccess" path="/admin/sommanage/deanbox/show.jsp"></forward>
+		</action>
+		
+		<!-- 领导信箱管理 wz 2009.09.16 -->
+	</action-mappings>
+</struts-config>

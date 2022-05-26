@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//E N"
+  "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+ 	<!--=======hht countryInfoUtil start=======-->
+	<bean id="countryInfoUtil"
+		class="crjd.model.admin.information.country.CountryInfoUtil">
+		<property name="operationDisposalI">
+			<ref bean="operationDisposeI"></ref>
+		</property>
+	</bean>
+
+	<bean id="countryInfoUtilProxy"
+		class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="proxyInterfaces">
+			<value>crjd.strutsUtils.OperationObjectI</value>
+		</property>
+		<property name="target">
+			<ref bean="countryInfoUtil"></ref>
+		</property>
+		<property name="interceptorNames">
+			<list>
+				<value>myBeforeAdvisor</value>
+				<value>myAfterAdvisor</value>
+				<value>myThrowsAdvisor</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean name="/countryInfoAction"
+		class="crjd.model.admin.information.country.CountryInfoAction"
+		singleton="false">
+		<property name="operationObjectI">
+			<ref bean="countryInfoUtilProxy"></ref>
+		</property>
+	</bean>
+	
+	
+	<!-- 栏目管理及授权　蒋华涛　2009.06.09 start -->
+	
+	<bean id="somMenuUtil"
+		class="crjd.model.admin.sommanage.sommenu.SomMenuUtil">
+		<property name="operationDisposalI">
+			<ref bean="operationDisposeI"></ref>
+		</property>
+	</bean>
+	<bean id="somMenuUtilProxy"
+		class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="proxyInterfaces">
+			<value>crjd.strutsUtils.OperationObjectI</value>
+		</property>
+		<property name="target">
+			<ref bean="somMenuUtil"></ref>
+		</property>
+		<property name="interceptorNames">
+			<list>
+				<value>myBeforeAdvisor</value>
+				<value>myAfterAdvisor</value>
+				<value>myThrowsAdvisor</value>
+			</list>
+		</property>
+	</bean>
+	<bean name="/somMenuAction"
+		class="crjd.model.admin.sommanage.sommenu.SomMenuAction"
+		singleton="false">
+		<property name="operationObjectI">
+			<ref bean="somMenuUtilProxy"></ref>
+		</property>
+	</bean>
+	
+	
+	<bean id="menuAccreditUtil"
+		class="crjd.model.admin.sommanage.sommenu.MenuAuthorityUtil">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory"></ref>
+		</property>
+		<property name="operationDisposalI">
+			<ref bean="operationDisposeI"></ref>
+		</property>
+	</bean>
+	<bean id="menuAccreditUtilProxy"
+		class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="target">
+			<ref bean="menuAccreditUtil"></ref>
+		</property>
+		<property name="interceptorNames">
+			<list>
+				<value>myBeforeAdvisor</value>
+				<value>myAfterAdvisor</value>
+				<value>myThrowsAdvisor</value>
+			</list>
+		</property>
+	</bean>
+	<bean name="/menuAuthorityAction"
+		class="crjd.model.admin.sommanage.sommenu.MenuAuthorityAction"
+		singleton="false">
+		<property name="menuAccreditUtil">
+			<ref bean="menuAccreditUtilProxy"></ref>
+		</property>
+	</bean>
+	
+	<!-- 栏目管理及授权　蒋华涛　2009.06.09  end -->
+	
+	
+	<!-- 杰出校友　蒋华涛　2009.06.30 start -->
+	
+	<bean id="shoolfellowUtil"
+		class="crjd.model.admin.sommanage.schoolfellow.SchoolfellowUtil">
+		<property name="operationDisposalI">
+			<ref bean="operationDisposeI"></ref>
+		</property>
+	</bean>
+	<bean id="shoolfellowUtilProxy"
+		class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="proxyInterfaces">
+			<value>crjd.strutsUtils.OperationObjectI</value>
+		</property>
+		<property name="target">
+			<ref bean="shoolfellowUtil"></ref>
+		</property>
+		<property name="interceptorNames">
+			<list>
+				<value>myBeforeAdvisor</value>
+				<value>myAfterAdvisor</value>
+				<value>myThrowsAdvisor</value>
+			</list>
+		</property>
+	</bean>
+	<bean name="/schoolfellowAction"
+		class="crjd.model.admin.sommanage.schoolfellow.SchoolfellowAction"
+		singleton="false">
+		<property name="operationObjectI">
+			<ref bean="shoolfellowUtilProxy"></ref>
+		</property>
+	</bean>
+	<!-- 杰出校友　蒋华涛　2009.06.30 end -->
+	
+	<!-- 学院领导　蒋华涛　2009.06.30 start -->
+	<bean id="leaderUtil"
+		class="crjd.model.admin.sommanage.leader.LeaderUtil">
+		<property name="operationDisposalI">
+			<ref bean="operationDisposeI"></ref>
+		</property>
+	</bean>
+	<bean id="leaderUtilProxy"
+		class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="proxyInterfaces">
+			<value>crjd.strutsUtils.OperationObjectI</value>
+		</property>
+		<property name="target">
+			<ref bean="leaderUtil"></ref>
+		</property>
+		<property name="interceptorNames">
+			<list>
+				<value>myBeforeAdvisor</value>
+				<value>myAfterAdvisor</value>
+				<value>myThrowsAdvisor</value>
+			</list>
+		</property>
+	</bean>
+	<bean name="/leaderAction"
+		class="crjd.model.admin.sommanage.leader.LeaderAction"
+		singleton="false">
+		<property name="operationObjectI">
+			<ref bean="leaderUtilProxy"></ref>
+		</property>
+	</bean>
+	<!-- 学院领导　蒋华涛　2009.06.30 end -->
+	
+	
+	<!-- 新闻信息管理　李小鹏　2009.06.17  start -->
+	<bean id="somInfomationUtil"
+		class="crjd.model.admin.sommanage.infomation.SomInfomationUtil">
+		<property name="operationDisposalI">
+			<ref bean="operationDisposeI"></ref>
+		</property>
+		<property name="insertTpXw">
+			<ref bean="insertTpXwID"></ref>
+		</property>
+	</bean>
+	<bean id="somInfomationUtilProxy"
+		class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="target">
+			<ref bean="somInfomationUtil"></ref>
+		</property>
+		<property name="interceptorNames">
+			<list>
+				<value>myBeforeAdvisor</value>
+				<value>myAfterAdvisor</value>
+				<value>myThrowsAdvisor</value>
+			</list>
+		</property>
+	</bean>
+	<bean name="/somInfomationAction"
+		class="crjd.model.admin.sommanage.infomation.SomInfomationAction"
+		singleton="false">
+		<property name="operationObjectI">
+			<ref bean="somInfomationUtilProxy"></ref>
+		</property>
+	</bean>
+	<!--  新闻信息管理　李小鹏　2009.06.17  end -->
+	
+		
+		<!-- 导师风采模块 吕江峰　2009.06.26  start -->
+		
+	<bean id="somTeacherUtil"
+		class="crjd.model.admin.sommanage.teachers.SomTeacherUtil">
+		<property name="operationDisposalI">
+			<ref bean="operationDisposeI"></ref>
+		</property>
+	</bean>
+	<bean id="somTeacherUtilProxy"
+		class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="target">
+			<ref bean="somTeacherUtil"></ref>
+		</property>
+		<property name="interceptorNames">
+			<list>
+				<value>myBeforeAdvisor</value>
+				<value>myAfterAdvisor</value>
+				<value>myThrowsAdvisor</value>
+			</list>
+		</property>
+	</bean>
+	<bean name="/somTeacherAction"
+		class="crjd.model.admin.sommanage.teachers.SomTeacherAction"
+		singleton="false">
+		<property name="operationObjectI">
+			<ref bean="somTeacherUtilProxy"></ref>
+		</property>
+	</bean>
+	<!--  导师风采模块　ljf　2009.06.26  end -->
+	  
+	  <!--  导师风采模块　ljf　2009.09.11  start -->
+	 <bean name="/onLineBmAction"
+	      class="crjd.model.admin.sommanage.onLineBm.OnLineBmAction">
+	   <property name="operationObjectI">
+	     <ref  bean="onLineBmUtilProxy"/>
+	   </property>
+	 </bean>
+	 <bean id="onLineBmUtilProxy" class="org.springframework.aop.framework.ProxyFactoryBean">
+	    
+	    <property name="target">
+	      <ref bean="onLineBmUtil"/>
+	    </property>
+	    <property name="interceptorNames">
+			<list>
+				<value>myBeforeAdvisor</value>
+				<value>myAfterAdvisor</value>
+				<value>myThrowsAdvisor</value>
+			</list>
+		</property>
+	 </bean>
+	 
+	 <bean id="onLineBmUtil" class="crjd.model.admin.sommanage.onLineBm.OnLineBmUtil">
+	   <property name="operationDisposalI">
+			<ref bean="operationDisposeI"></ref>
+		</property>
+	 </bean>
+	 <!--  导师风采模块　ljf　2009.09.11  end -->
+
+	  <!-- 院长信箱管理 wz 2009.09.16 -->
+	 <bean name="/deanBoxAction" class="crjd.model.admin.sommanage.deanbox.DeanBoxAction">
+	 <property name="operationObjectI">
+	     <ref  bean="deanBoxUtilProxy"/>
+	   </property>
+	 </bean>
+	 <bean name="deanBoxUtilProxy" class="org.springframework.aop.framework.ProxyFactoryBean">
+	    <property name="target">
+	      <ref bean="deanBoxUtil"/>
+	    </property>
+	    <property name="interceptorNames">
+			<list>
+				<value>myBeforeAdvisor</value>
+				<value>myAfterAdvisor</value>
+				<value>myThrowsAdvisor</value>
+			</list>
+		</property>
+	 </bean>
+	 <bean name="deanBoxUtil" class="crjd.model.admin.sommanage.deanbox.DeanBoxUtil">
+	 <property name="operationDisposalI">
+			<ref bean="operationDisposeI"></ref>
+		</property>
+	 </bean>
+	 
+	 <!-- 院长信箱管理 wz 2009.09.16 -->
+</beans>

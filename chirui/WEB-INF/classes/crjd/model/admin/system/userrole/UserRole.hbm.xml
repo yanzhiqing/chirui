@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping>
+<!--
+    Created by the Middlegen Hibernate plugin 2.1
+
+    http://boss.bekk.no/boss/middlegen/
+    http://www.hibernate.org/
+-->
+
+<class
+    name="crjd.model.admin.system.userrole.UserRole"
+    table="TB_M_USER_ROLE"
+>
+
+   <id
+        name="urRowId"
+        type="java.lang.Integer"
+        column="UR_ROW_ID"
+    >
+        <generator class="increment" />
+    </id>
+
+
+    <property
+        name="userId"
+        type="java.lang.Integer"
+        column="USER_ID"
+    />
+    <property
+        name="roleId"
+        type="java.lang.Integer"
+        column="ROLE_ID"
+    />
+    <property
+        name="urRemark"
+        type="java.lang.String"
+        column="UR_REMARK"
+    />
+    <property
+        name="urCol1"
+        type="java.lang.String"
+        column="UR_COL1"
+    />
+    <property
+        name="urCol2"
+        type="java.lang.String"
+        column="UR_COL2"
+    />
+    <property
+        name="urLuser"
+        type="java.lang.String"
+        column="UR_LUSER"
+    />
+
+
+    <!-- Associations -->
+
+
+</class>
+</hibernate-mapping>

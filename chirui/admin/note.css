@@ -1,0 +1,40 @@
+td {
+	font-family: "宋体";
+	font-size: 12px;
+	color: #419BF5;
+}
+a:link {
+	font-family: "宋体";
+	font-size: 12px;
+	color: #419BF5;
+}
+a:visited {
+	font-family: "宋体";
+	font-size: 12px;
+	color: #419BF5;
+}
+a:hover {
+	font-family: "宋体";
+	font-size: 13px;
+	color: #92C6FA;
+}
+a:active {
+	font-family: "宋体";
+	font-size: 11px;
+	color: #FF6868;
+.biankuang {
+}
+.biankuang {
+	border-top-width: thin;
+	border-right-width: thin;
+	border-bottom-width: thin;
+	border-left-width: thin;
+	border-top-style: none;
+	border-right-style: solid;
+	border-bottom-style: none;
+	border-left-style: none;
+	border-top-color: #CCCCCC;
+	border-right-color: #CCCCCC;
+	border-bottom-color: #CCCCCC;
+	border-left-color: #CCCCCC;
+}

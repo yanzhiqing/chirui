@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping>
+<!--
+    Created by the Middlegen Hibernate plugin 2.1
+
+    http://boss.bekk.no/boss/middlegen/
+    http://www.hibernate.org/
+-->
+
+<class
+    name="crjd.model.admin.information.country.CountryInfo"
+    table="COUNTRY"
+>
+
+ <id
+        name="couRowId"
+        type="java.lang.Integer"
+        column="ROW_ID"
+    >
+        <generator class="increment" />
+    </id>
+    <property
+        name="countryNo"
+        type="java.lang.String"
+        column="COUNTRYNO"
+    />
+    <property
+        name="continent"
+        type="java.lang.String"
+        column="CONTINENT"
+    />
+    <property
+        name="continentEn"
+        type="java.lang.String"
+        column="CONTINENTEN"
+    />
+	<property
+        name="continentCode"
+        type="java.lang.String"
+        column="CONTINENTCODE"
+    />
+	 <property
+        name="country"
+        type="java.lang.String"
+        column="COUNTRY"
+    />
+	 <property
+        name="countryEn"
+        type="java.lang.String"
+        column="COUNTRYEN"
+    />
+	 <property
+        name="postalCode"
+        type="java.lang.String"
+        column="POSTALCODE"
+    />
+	<property
+        name="countryCode"
+        type="java.lang.String"
+        column="COUNTRYCODE"
+    />
+	 <property
+        name="hiddenFlag"
+        type="java.lang.String"
+        column="HIDDENFLAG"
+    />
+		 <property
+        name="curchNam"
+        type="java.lang.String"
+        column="CURCHNAM"
+    />
+	 <property
+        name="curenNam"
+        type="java.lang.String"
+        column="CURENNAM"
+    />
+	 <property
+        name="oldSign"
+        type="java.lang.String"
+        column="OLDSIGN"
+    />
+	 <property
+        name="staSign"
+        type="java.lang.String"
+        column="STASIGN"
+    />
+</class>
+</hibernate-mapping>

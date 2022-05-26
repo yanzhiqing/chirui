@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping>
+<!--
+    Created by the Middlegen Hibernate plugin 2.1
+
+    http://boss.bekk.no/boss/middlegen/
+    http://www.hibernate.org/
+-->
+
+<class
+     name="crjd.model.admin.system.menupop.MenuPope"
+    table="TB_M_MENU_POPE"
+>
+
+         <id
+        name="popeRowId"
+        type="java.lang.Integer"
+        column="POPE_ROW_ID"
+    >
+        <generator class="increment" />
+    </id>
+
+
+
+    <property
+        name="menuId"
+        type="java.lang.Integer"
+        column="MENU_ID"
+    />
+    <property
+        name="popeName"
+        type="java.lang.String"
+        column="POPE_NAME"
+    />
+    <property
+        name="popeUrl"
+        type="java.lang.String"
+        column="POPE_URL"
+    />
+    <property
+        name="col1"
+        type="java.lang.String"
+        column="COL1"
+    />
+    <property
+        name="col2"
+        type="java.lang.String"
+        column="COL2"
+    />
+    <property
+        name="luser"
+        type="java.lang.String"
+        column="LUSER"
+    />
+    <!-- Associations -->
+
+     <set name="roleMenuPopeList"
+        	cascade="all"
+               inverse="true"
+               lazy="true"
+        	>
+            <key column="POPE_ID"/>
+            <one-to-many class="crjd.model.admin.system.role.RoleMenuPope"/>
+      </set>
+
+</class>
+</hibernate-mapping>

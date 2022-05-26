@@ -1,0 +1,158 @@
+.normal {
+	border: thin solid #9BBFFB;
+}
+.left {
+	border-left-style: none;
+	font-family: "宋体";
+	font-size: 12px;
+}
+.right {
+	border-right-style: none;
+	font-family: "宋体";
+	font-size: 12px;
+}
+.bndt {
+	border-top-style: none;
+	border-bottom-style: none;
+}
+.top {
+	border-top-style: none;
+}
+.bottom {
+	border-bottom-style: none;
+}
+.ziti {
+	font-family: "宋体";
+	font-size: 12px;
+}
+textarea {
+	font-family: "宋体";
+	font-size: small;
+}
+button {
+	font-family: "宋体";
+	font-size: 12px;
+}
+.header {
+	font-family: "宋体";
+	font-size: 12px;
+	font-weight: bold;
+}
+a:link {
+	font-family: "宋体";
+	font-size: 12px;
+	color: #419BF5;
+}
+a:visited {
+	font-family: "宋体";
+	font-size: 12px;
+	color: #419BF5;
+}
+a:hover {
+	font-family: "宋体";
+	font-size: 12px;
+	color: #92C6FA;
+}
+a:active {
+	font-family: "宋体";
+	font-size: 12px;
+	color: #FF6868;
+}
+.shuru {
+	font-family: "宋体";
+	font-size: 9pt;
+}
+.other {
+	font-family: "宋体";
+	font-size: 12px;
+}
+td {
+	font-family: "宋体";
+	font-size: 12px;
+	color: #000000;
+	height: 20px;
+}
+.wudi {
+	border-top-width: thin;
+	border-right-width: thin;
+	border-bottom-width: thin;
+	border-left-width: thin;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: solid;
+	border-left-style: none;
+	border-top-color: #CCCCCC;
+	border-right-color: #CCCCCC;
+	border-bottom-color: #CCCCCC;
+	border-left-color: #CCCCCC;
+}
+.chaxun {
+	font-family: "宋体";
+	font-size: 9px;
+	color: #000000;
+}
+.wushang {
+	border-top-width: thin;
+	border-right-width: thin;
+	border-bottom-width: thin;
+	border-left-width: thin;
+	border-top-style: none;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #DEE5EF;
+	border-right-color: #DEE5EF;
+	border-bottom-color: #DEE5EF;
+	border-left-color: #DEE5EF;
+}
+.hhh {
+	font-family: "宋体";
+	font-size: 12px;
+	font-weight: bold;
+}
+.b11 {
+	font-family: "宋体";
+	font-size: 11px;
+}
+.renzheng {
+	font-family: "宋体";
+	font-size: 14px;
+	font-weight: bold;
+}
+.leftborder {
+	border-top-width: thin;
+	border-right-width: thin;
+	border-bottom-width: thin;
+	border-left-width: thin;
+	border-top-style: solid;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: solid;
+	border-top-color: #DEE5EF;
+	border-right-color: #DEE5EF;
+	border-bottom-color: #DEE5EF;
+	border-left-color: #DEE5EF;
+
+}
+.rightborder {
+	border-top-width: thin;
+	border-right-width: thin;
+	border-bottom-width: thin;
+	border-left-width: thin;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: none;
+	border-left-style: none;
+	border-top-color: #DEE5EF;
+	border-right-color: #DEE5EF;
+	border-bottom-color: #DEE5EF;
+	border-left-color: #DEE5EF;
+}
+.content {
+	line-height: 25px;
+	text-indent: 24px;
+	padding-left: 10px;
+	padding-right: 10px;
+	word-break:break-all;
+}
+

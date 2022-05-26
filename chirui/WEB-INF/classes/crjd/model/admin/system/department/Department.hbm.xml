@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping>
+<!--
+    Created by the Middlegen Hibernate plugin 2.1
+
+    http://boss.bekk.no/boss/middlegen/
+    http://www.hibernate.org/
+-->
+
+<class
+    name="crjd.model.admin.system.department.Department"
+    table="TB_M_DEPARTMENT"
+>
+
+    <id
+        name="depRowId"
+        type="java.lang.Integer"
+        column="DEP_ROW_ID"
+    >
+        <generator class="increment" />
+    </id>
+    
+    
+    <property
+        name="depId"
+        type="java.lang.String"
+        column="DEP_ID"
+        length="8"
+    />
+    <property
+        name="depName"
+        type="java.lang.String"
+        column="DEP_NAME"
+        length="20"
+    />
+    <!--property
+        name="depUpId"
+        type="java.lang.String"
+        column="DEP_UP_ID"
+        length="8"
+    /-->
+    <property
+        name="depMaster"
+        type="java.lang.String"
+        column="DEP_MASTER"
+        length="20"
+    />
+    <property
+        name="depAddress"
+        type="java.lang.String"
+        column="DEP_ADDRESS"
+        length="200"
+    />
+    <property
+        name="depPhone"
+        type="java.lang.String"
+        column="DEP_PHONE"
+        length="20"
+    />
+    <property
+        name="depRemark"
+        type="java.lang.String"
+        column="DEP_REMARK"
+        length="1000"
+    />
+    <property
+        name="depCol1"
+        type="java.lang.String"
+        column="DEP_COL1"
+        length="50"
+    />
+    <property
+        name="depCol2"
+        type="java.lang.String"
+        column="DEP_COL2"
+        length="50"
+    />
+    <property
+        name="depLuser"
+        type="java.lang.String"
+        column="DEP_LUSER"
+        length="20"
+    />
+    <!--property
+        name="depLdate"
+        type="java.sql.Timestamp"
+        column="DEP_LDATE"
+        length="7"
+    /-->
+
+    <many-to-one name="upDepartment"
+                 class="crjd.model.admin.system.department.Department"
+                 cascade="none"
+                 update="true"
+                 insert="true"
+                 column="DEP_UP_ID"
+      >
+    </many-to-one>
+
+
+    <set name="lowerDepartment"
+         cascade="all"
+         inverse="true"
+         lazy="true"
+    >
+         <key column="DEP_UP_ID"/>
+         <one-to-many class="crjd.model.admin.system.department.Department"/>
+    </set>
+
+
+    <set name="allUser"
+         cascade="all"
+         inverse="true"
+         lazy="true"
+    >
+         <key column="USER_DEP_ID"/>
+         <one-to-many class="crjd.model.admin.system.user.UserInfo"/>
+    </set>
+    <!-- Associations -->
+
+</class>
+</hibernate-mapping>
